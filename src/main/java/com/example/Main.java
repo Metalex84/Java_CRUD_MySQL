@@ -36,7 +36,7 @@ public class Main {
             System.out.println("Eliminado: " + deleted);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error de base de datos: " + e.getMessage());
         }
     }
 }

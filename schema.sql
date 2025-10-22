@@ -1,5 +1,4 @@
--- Create database
--- Create users table
+-- Create users table (no se crea si ya existe)
 CREATE TABLE IF NOT EXISTS users (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
