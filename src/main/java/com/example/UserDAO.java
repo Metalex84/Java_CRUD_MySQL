@@ -17,6 +17,14 @@ public class UserDAO {
      * @throws SQLException si la operación de base de datos falla
      */
     public User createUser(User user) throws SQLException {
+        // Validate required fields
+        if (user.getName() == null) {
+            throw new SQLException("User name cannot be null");
+        }
+        if (user.getEmail() == null) {
+            throw new SQLException("User email cannot be null");
+        }
+        
         String sql = "INSERT INTO users (name, email, age) VALUES (?, ?, ?)";
         
         try (Connection conn = DatabaseConnection.getConnection();
