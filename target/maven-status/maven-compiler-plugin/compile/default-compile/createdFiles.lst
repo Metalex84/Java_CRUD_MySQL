@@ -1,4 +1,6 @@
+com/example/UserGUI$1.class
 com/example/Main.class
+com/example/UserGUI.class
 com/example/UserDAO.class
 com/example/User.class
 com/example/DatabaseConnection.class

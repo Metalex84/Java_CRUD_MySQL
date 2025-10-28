@@ -46,11 +46,20 @@ private static final String PASSWORD = "tu_contraseña";
 
 ### 3. Construir y Ejecutar
 
+#### Interfaz Gráfica (por defecto)
+
 ```bash
 # Construir el proyecto
 mvn clean compile
 
-# Ejecutar la aplicación
+# Ejecutar la interfaz gráfica
+mvn exec:java
+```
+
+#### Versión de línea de comandos
+
+```bash
+# Ejecutar el Main original con ejemplos CRUD
 mvn exec:java -Dexec.mainClass="com.example.Main"
 ```
 
@@ -62,7 +71,8 @@ src/
 │   └── java/
 │       └── com/
 │           └── example/
-│               ├── Main.java              # Clase principal con demo CRUD
+│               ├── UserGUI.java           # Interfaz gráfica CRUD (principal)
+│               ├── Main.java              # Demo CRUD por consola
 │               ├── User.java              # Clase modelo de usuario
 │               ├── UserDAO.java           # Operaciones CRUD
 │               └── DatabaseConnection.java # Utilidad de conexión a BD
@@ -87,7 +97,29 @@ La aplicación demuestra:
 - `User`: Clase modelo que representa la entidad usuario
 - `DatabaseConnection`: Utilidad para gestionar conexiones a la base de datos
 - `UserDAO`: Objeto de Acceso a Datos con operaciones CRUD usando PreparedStatements
-- `Main`: Demuestra el uso de todas las operaciones CRUD
+- `UserGUI`: Interfaz gráfica Swing para gestionar usuarios con operaciones CRUD
+- `Main`: Demo por consola de las operaciones CRUD
+
+## Uso de la Interfaz Gráfica
+
+La aplicación UserGUI proporciona una interfaz gráfica intuitiva con:
+
+- **Formulario**: Campos para ID, Nombre, Email y Edad
+- **Tabla**: Visualización de todos los usuarios registrados
+- **Botones de acción**:
+  - **Crear**: Agregar nuevo usuario (completa nombre, email y edad)
+  - **Actualizar**: Modificar usuario seleccionado de la tabla
+  - **Eliminar**: Borrar usuario seleccionado (con confirmación)
+  - **Limpiar**: Vaciar todos los campos del formulario
+- **Búsqueda**: Filtrar usuarios por nombre
+- **Mostrar Todos**: Recargar la lista completa de usuarios
+
+### Flujo de trabajo:
+
+1. **Crear usuario**: Completa los campos (sin ID) y haz clic en "Crear"
+2. **Editar usuario**: Haz clic en una fila de la tabla, modifica los datos y presiona "Actualizar"
+3. **Eliminar usuario**: Selecciona una fila y haz clic en "Eliminar"
+4. **Buscar usuario**: Ingresa un nombre en el campo de búsqueda y presiona "Buscar"
 
 ## Características de Seguridad
 
