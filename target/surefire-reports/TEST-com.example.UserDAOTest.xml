@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.UserDAOTest" time="1.147" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.UserDAOTest" time="1.097" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/alex/Coding_Workbench/Java_DB/target/surefire/surefirebooter-20251028131322649_3.jar /Users/alex/Coding_Workbench/Java_DB/target/surefire 2025-10-28T13-13-22_600-jvmRun1 surefire-20251028131322649_1tmp surefire_0-20251028131322649_2tmp"/>
+    <property name="sun.java.command" value="/Users/alex/Coding_Workbench/Java_DB/target/surefire/surefirebooter-20251028131632572_3.jar /Users/alex/Coding_Workbench/Java_DB/target/surefire 2025-10-28T13-16-32_533-jvmRun1 surefire-20251028131632572_1tmp surefire_0-20251028131632572_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/alex/Coding_Workbench/Java_DB/target/test-classes:/Users/alex/Coding_Workbench/Java_DB/target/classes:/Users/alex/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/alex/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar:/Users/alex/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/alex/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/alex/Coding_Workbench/Java_DB/target/surefire/surefirebooter-20251028131322649_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/alex/Coding_Workbench/Java_DB/target/surefire/surefirebooter-20251028131632572_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25"/>
@@ -59,55 +59,55 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testDatabaseConnection" classname="com.example.UserDAOTest" time="0.49">
+  <testcase name="testDatabaseConnection" classname="com.example.UserDAOTest" time="0.416">
     <system-out><![CDATA[
 [TEST 10] testDatabaseConnection - Iniciando...
 [TEST 10] ✅ ÉXITO - Conexión a base de datos funcionando correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateUserWithNullName" classname="com.example.UserDAOTest" time="0.033">
+  <testcase name="testCreateUserWithNullName" classname="com.example.UserDAOTest" time="0.034">
     <system-out><![CDATA[
 [TEST 4a] testCreateUserWithNullName - Iniciando...
 [TEST 4a] ✅ ÉXITO - SQLException lanzada correctamente para nombre nulo
 ]]></system-out>
   </testcase>
-  <testcase name="testGetNonExistentUserById" classname="com.example.UserDAOTest" time="0.068">
+  <testcase name="testGetNonExistentUserById" classname="com.example.UserDAOTest" time="0.06">
     <system-out><![CDATA[
 [TEST 9] testGetNonExistentUserById - Iniciando...
 [TEST 9] ✅ ÉXITO - Usuario inexistente retornó null correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateNonExistentUser" classname="com.example.UserDAOTest" time="0.053">
+  <testcase name="testUpdateNonExistentUser" classname="com.example.UserDAOTest" time="0.051">
     <system-out><![CDATA[
 [TEST 4d] testUpdateNonExistentUser - Iniciando...
 [TEST 4d] ✅ ÉXITO - Actualización de usuario inexistente falló correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testSearchFunctionality" classname="com.example.UserDAOTest" time="0.079">
+  <testcase name="testSearchFunctionality" classname="com.example.UserDAOTest" time="0.088">
     <system-out><![CDATA[
 [TEST 5] testSearchFunctionality - Iniciando...
 [TEST 5] ✅ ÉXITO - Búsqueda encontró 3 usuarios con 'John'
 ]]></system-out>
   </testcase>
-  <testcase name="testGetAllUsers" classname="com.example.UserDAOTest" time="0.065">
+  <testcase name="testGetAllUsers" classname="com.example.UserDAOTest" time="0.066">
     <system-out><![CDATA[
 [TEST 7] testGetAllUsers - Iniciando...
 [TEST 7] ✅ ÉXITO - Se obtuvieron todos los usuarios (3 usuarios)
 ]]></system-out>
   </testcase>
-  <testcase name="testSearchWithNoMatches" classname="com.example.UserDAOTest" time="0.057">
+  <testcase name="testSearchWithNoMatches" classname="com.example.UserDAOTest" time="0.063">
     <system-out><![CDATA[
 [TEST 6] testSearchWithNoMatches - Iniciando...
 [TEST 6] ✅ ÉXITO - Búsqueda sin coincidencias retornó lista vacía
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateUserWithNullEmail" classname="com.example.UserDAOTest" time="0.029">
+  <testcase name="testCreateUserWithNullEmail" classname="com.example.UserDAOTest" time="0.031">
     <system-out><![CDATA[
 [TEST 4b] testCreateUserWithNullEmail - Iniciando...
 [TEST 4b] ✅ ÉXITO - SQLException lanzada correctamente para email nulo
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateUserWithNegativeAge" classname="com.example.UserDAOTest" time="0.034">
+  <testcase name="testCreateUserWithNegativeAge" classname="com.example.UserDAOTest" time="0.033">
     <system-out><![CDATA[
 [TEST 4c] testCreateUserWithNegativeAge - Iniciando...
 [TEST 4c] ✅ ÉXITO - Usuario con edad negativa creado (sin validación de negocio)
@@ -119,25 +119,25 @@
 [TEST 3] ✅ ÉXITO - Usuario eliminado correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testGetUserById" classname="com.example.UserDAOTest" time="0.034">
+  <testcase name="testGetUserById" classname="com.example.UserDAOTest" time="0.045">
     <system-out><![CDATA[
 [TEST 8] testGetUserById - Iniciando...
 [TEST 8] ✅ ÉXITO - Usuario recuperado por ID correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateUserWithValidData" classname="com.example.UserDAOTest" time="0.053">
+  <testcase name="testCreateUserWithValidData" classname="com.example.UserDAOTest" time="0.045">
     <system-out><![CDATA[
 [TEST 1] testCreateUserWithValidData - Iniciando...
 [TEST 1] ✅ ÉXITO - Usuario creado correctamente con ID: 1
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteNonExistentUser" classname="com.example.UserDAOTest" time="0.031">
+  <testcase name="testDeleteNonExistentUser" classname="com.example.UserDAOTest" time="0.036">
     <system-out><![CDATA[
 [TEST 4e] testDeleteNonExistentUser - Iniciando...
 [TEST 4e] ✅ ÉXITO - Eliminación de usuario inexistente falló correctamente
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateUserWithValidData" classname="com.example.UserDAOTest" time="0.044">
+  <testcase name="testUpdateUserWithValidData" classname="com.example.UserDAOTest" time="0.046">
     <system-out><![CDATA[
 [TEST 2] testUpdateUserWithValidData - Iniciando...
 [TEST 2] ✅ ÉXITO - Usuario actualizado correctamente

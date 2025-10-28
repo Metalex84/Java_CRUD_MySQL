@@ -126,3 +126,47 @@ La aplicación UserGUI proporciona una interfaz gráfica intuitiva con:
 - Usa PreparedStatements para prevenir inyección SQL
 - Gestión adecuada de recursos con try-with-resources
 - Listo para pool de conexiones (se puede extender)
+
+## Pruebas Unitarias
+
+El proyecto incluye pruebas unitarias completas en `src/test/java/com/example/UserDAOTest.java`.
+
+### Ejecutar las pruebas
+
+```bash
+# Ejecutar todas las pruebas
+mvn test
+
+# Ejecutar una prueba específica
+mvn test -Dtest=UserDAOTest#testCreateUserWithValidData
+```
+
+### Casos de Prueba
+
+#### Operaciones CRUD Básicas
+- **Test 1**: `testCreateUserWithValidData` - Verifica la creación exitosa de usuarios con datos válidos
+- **Test 2**: `testUpdateUserWithValidData` - Verifica la actualización de usuarios existentes
+- **Test 3**: `testDeleteUser` - Verifica la eliminación correcta de usuarios
+- **Test 8**: `testGetUserById` - Verifica la recuperación de usuarios por ID
+- **Test 7**: `testGetAllUsers` - Verifica la obtención de todos los usuarios
+
+#### Validación y Manejo de Errores
+- **Test 4a**: `testCreateUserWithNullName` - Verifica que `createUser` lanza `SQLException` cuando el nombre es null
+- **Test 4b**: `testCreateUserWithNullEmail` - Verifica que `createUser` lanza `SQLException` cuando el email es null
+- **Test 4c**: `testCreateUserWithNegativeAge` - Verifica el comportamiento con edad negativa
+- **Test 4d**: `testUpdateNonExistentUser` - Verifica el fallo al actualizar un usuario inexistente
+- **Test 4e**: `testDeleteNonExistentUser` - Verifica el fallo al eliminar un usuario inexistente
+- **Test 9**: `testGetNonExistentUserById` - Verifica que retorna null para usuarios inexistentes
+
+#### Funcionalidad de Búsqueda
+- **Test 5**: `testSearchFunctionality` - Verifica la búsqueda por nombre con coincidencias parciales
+- **Test 6**: `testSearchWithNoMatches` - Verifica el comportamiento cuando no hay coincidencias
+
+#### Conexión a Base de Datos
+- **Test 10**: `testDatabaseConnection` - Verifica la conexión y desconexión de la base de datos
+
+### Notas sobre las Pruebas
+
+- Todas las pruebas limpian la base de datos antes y después de ejecutarse para garantizar aislamiento
+- Las pruebas utilizan la anotación `@Test(expected = SQLException.class)` para verificar excepciones
+- Cada prueba incluye mensajes de consola para seguimiento del progreso
