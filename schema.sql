@@ -1,6 +1,6 @@
 -- Create users table (no se crea si ya existe)
 CREATE TABLE IF NOT EXISTS users (
-id INTEGER PRIMARY KEY AUTOINCREMENT,
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     age INT NOT NULL,
